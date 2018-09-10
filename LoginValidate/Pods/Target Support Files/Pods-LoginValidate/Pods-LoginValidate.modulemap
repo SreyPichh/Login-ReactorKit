@@ -1,0 +1,6 @@
+framework module Pods_LoginValidate {
+  umbrella header "Pods-LoginValidate-umbrella.h"
+
+  export *
+  module * { export * }
+}
