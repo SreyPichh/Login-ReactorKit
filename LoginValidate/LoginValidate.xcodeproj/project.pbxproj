@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		4182AF7D451B8E564E859380 /* Pods_LoginValidate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F84CA9F9B065719F46AEB14 /* Pods_LoginValidate.framework */; };
 		48262B3821467FAB0011F944 /* ViewControllerReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48262B3721467FAB0011F944 /* ViewControllerReactor.swift */; };
+		48EAEF97214775A700015C7A /* ViewControllerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EAEF96214775A700015C7A /* ViewControllerRouter.swift */; };
+		48EAEF9B2147794400015C7A /* LoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EAEF9A2147794400015C7A /* LoggedInViewController.swift */; };
+		48EAEF9E214779C900015C7A /* LoggedInViewControllerSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EAEF9D214779C900015C7A /* LoggedInViewControllerSubView.swift */; };
 		B9CEA29D214394F20031BEBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CEA29C214394F20031BEBD /* AppDelegate.swift */; };
 		B9CEA29F214394F20031BEBD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CEA29E214394F20031BEBD /* ViewController.swift */; };
 		B9CEA2A2214394F20031BEBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9CEA2A0214394F20031BEBD /* Main.storyboard */; };
@@ -21,6 +24,9 @@
 		3F84CA9F9B065719F46AEB14 /* Pods_LoginValidate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoginValidate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		40367CC04445AE40CB72B4B9 /* Pods-LoginValidate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginValidate.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoginValidate/Pods-LoginValidate.release.xcconfig"; sourceTree = "<group>"; };
 		48262B3721467FAB0011F944 /* ViewControllerReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerReactor.swift; sourceTree = "<group>"; };
+		48EAEF96214775A700015C7A /* ViewControllerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerRouter.swift; sourceTree = "<group>"; };
+		48EAEF9A2147794400015C7A /* LoggedInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInViewController.swift; sourceTree = "<group>"; };
+		48EAEF9D214779C900015C7A /* LoggedInViewControllerSubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedInViewControllerSubView.swift; sourceTree = "<group>"; };
 		A7F08AA30CD994A2740F02C6 /* Pods-LoginValidate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoginValidate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoginValidate/Pods-LoginValidate.debug.xcconfig"; sourceTree = "<group>"; };
 		B9CEA299214394F20031BEBD /* LoginValidate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginValidate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9CEA29C214394F20031BEBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +65,39 @@
 				48262B3721467FAB0011F944 /* ViewControllerReactor.swift */,
 			);
 			path = Reactor;
+			sourceTree = "<group>";
+		};
+		48EAEF952147758700015C7A /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				48EAEF96214775A700015C7A /* ViewControllerRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		48EAEF982147792300015C7A /* LoggedIn */ = {
+			isa = PBXGroup;
+			children = (
+				48EAEF992147792F00015C7A /* View */,
+			);
+			path = LoggedIn;
+			sourceTree = "<group>";
+		};
+		48EAEF992147792F00015C7A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				48EAEF9C214779A300015C7A /* subView */,
+				48EAEF9A2147794400015C7A /* LoggedInViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		48EAEF9C214779A300015C7A /* subView */ = {
+			isa = PBXGroup;
+			children = (
+				48EAEF9D214779C900015C7A /* LoggedInViewControllerSubView.swift */,
+			);
+			path = subView;
 			sourceTree = "<group>";
 		};
 		B9CEA290214394F20031BEBD = {
@@ -127,6 +166,7 @@
 		B9CEA2B22143954E0031BEBD /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				48EAEF982147792300015C7A /* LoggedIn */,
 				B9CEA2B4214395660031BEBD /* Main */,
 			);
 			path = Presentation;
@@ -143,6 +183,7 @@
 		B9CEA2B5214395720031BEBD /* View */ = {
 			isa = PBXGroup;
 			children = (
+				48EAEF952147758700015C7A /* Router */,
 				48262B3621465ADB0011F944 /* Reactor */,
 				B9CEA2B62143957C0031BEBD /* SubView */,
 				B9CEA29E214394F20031BEBD /* ViewController.swift */,
@@ -285,9 +326,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9CEA29F214394F20031BEBD /* ViewController.swift in Sources */,
+				48EAEF97214775A700015C7A /* ViewControllerRouter.swift in Sources */,
 				48262B3821467FAB0011F944 /* ViewControllerReactor.swift in Sources */,
+				48EAEF9B2147794400015C7A /* LoggedInViewController.swift in Sources */,
 				B9CEA2B8214396880031BEBD /* ViewControllerSubView.swift in Sources */,
 				B9CEA29D214394F20031BEBD /* AppDelegate.swift in Sources */,
+				48EAEF9E214779C900015C7A /* LoggedInViewControllerSubView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
