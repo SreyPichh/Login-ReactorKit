@@ -10,7 +10,6 @@ import Foundation
 import SnapKit
 
 class ViewControllerSubView {
-    let login_url = "https://qiita.com/phansreypich/items/9f2360b485929d2d5639"
     lazy var loginBtn: UIButton = {
         let btn: UIButton = UIButton()
         btn.backgroundColor = UIColor.blue
